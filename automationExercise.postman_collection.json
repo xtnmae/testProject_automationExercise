@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "e99b2e55-5d49-4adc-a524-72124bff59e1",
+		"name": "automationExercise",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17596883",
+		"_collection_link": "https://www.postman.com/lunar-comet-962531/workspace/public-workspace/collection/17596883-e99b2e55-5d49-4adc-a524-72124bff59e1?action=share&creator=17596883&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "API 3: Get All Brands List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Automation Exercise brands\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.responseCode).to.eql(200);\r",
+							"});\r",
+							"\r",
+							"const brands = pm.response.json().brands;\r",
+							"\r",
+							"if (brands && brands.length) {\r",
+							"    tests[\"Count: \" + brands.length] = true;\r",
+							"} else {\r",
+							"    tests[\"missing brands\"]; \r",
+							"}\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://automationexercise.com/api/brandsList",
+					"protocol": "https",
+					"host": [
+						"automationexercise",
+						"com"
+					],
+					"path": [
+						"api",
+						"brandsList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API 5: POST To Search Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://automationexercise.com/api/searchProduct?search_product=jean",
+					"protocol": "https",
+					"host": [
+						"automationexercise",
+						"com"
+					],
+					"path": [
+						"api",
+						"searchProduct"
+					],
+					"query": [
+						{
+							"key": "searchProduct",
+							"value": "dress",
+							"disabled": true
+						},
+						{
+							"key": "search_product",
+							"value": "jean"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
