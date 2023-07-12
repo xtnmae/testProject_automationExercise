@@ -1,6 +1,6 @@
 # Selenium in C# language with NUnit Framework for Automation Exercise Exam
 
-There is two items here
+There are two items here
 1. TC_Registration
 2. TC14_PlaceOrderRegistrationWhileCheckout
 
