@@ -1,6 +1,6 @@
-# Selenium in C# language with NUnit Framework for Automation Exercise Exam
+# Selenium in C# language with NUnit Framework and API for Automation Exercise Exam
 
-There are two items here
+There are two items here for the selenium automation that you can open in Visual Studio
 1. TC_Registration
 2. TC14_PlaceOrderRegistrationWhileCheckout
 
